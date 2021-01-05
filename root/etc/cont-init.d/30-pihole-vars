@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sed -i 's/PIHOLE_DNS_1=.*/PIHOLE_DNS_1=127.0.0.1#5300' setupVars.conf
+sed -i '/PIHOLE_DNS_2=.*/d' setupVars.conf
