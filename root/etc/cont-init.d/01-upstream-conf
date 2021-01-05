@@ -12,8 +12,8 @@ if [ ! -e /etc/upstream.d ] ; then
   mkdir /etc/upstream.d
 fi
 
-if [ ! -e /etc/upstream/resolv.conf ] ; then
-  touch /etc/upstream/resolv.conf
+if [ -e /var/lib/misc/dnsmasq.leases ] ; then
+  chown pihole:pihole  /var/lib/misc/dnsmasq.leases
 fi
 
 chown pihole:pihole -R /var/run/upstream /etc/upstream /etc/upstream.d

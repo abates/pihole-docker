@@ -10,4 +10,4 @@ COPY root/ /
 VOLUME ["/etc/upstream"]
 VOLUME ["/etc/upstream.d"]
 
-ENTRYPOINT ["/init"]
+ENTRYPOINT ["/s6-init"]
